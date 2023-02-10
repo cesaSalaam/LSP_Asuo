@@ -45,7 +45,7 @@ public class FileReader {
 						}
 					}
 					
-					return output.toLowerCase().trim(); // lower case the string and trim white spaces
+					return wordCounter(output.toLowerCase().trim()); // lower case the string and trim white spaces
 					
 				} finally {
 					sc.close();
@@ -66,10 +66,8 @@ public class FileReader {
 	public String wordCounter(String input) {
 		
 		List<String> list = Arrays.asList(input.split(" "));
-		//list.removeAll(Collections.singleton(" "));
-		System.out.println(list);
-		
-		//ArrayList<String> singleWords = new ArrayList<String>();
+
+		//System.out.println(list);
 		
 		Set<String> distinct = new HashSet<>(list);
 		

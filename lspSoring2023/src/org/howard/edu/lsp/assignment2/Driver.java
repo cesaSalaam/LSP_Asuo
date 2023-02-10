@@ -8,7 +8,7 @@ public class Driver {
 		FileReader fr = new FileReader();
 		try {
 			
-			System.out.println(fr.wordCounter(fr.readToString("main/java/resources/words.txt")));
+			System.out.println(fr.readToString("main/java/resources/words.txt"));
 		} catch (FileNotFoundException e) {
 			System.out.println("Unable to open resource");
 		}
