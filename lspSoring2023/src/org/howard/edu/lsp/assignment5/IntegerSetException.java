@@ -1,4 +1,4 @@
-package org.howard.edu.lsp.assignment4;
+package org.howard.edu.lsp.assignment5;
 
 /**
  * 
@@ -8,6 +8,6 @@ package org.howard.edu.lsp.assignment4;
 public class IntegerSetException extends Exception {
 	/**
 	 * 
-	 * 
+	 * @param message that describes the erorr
 	 */
 }

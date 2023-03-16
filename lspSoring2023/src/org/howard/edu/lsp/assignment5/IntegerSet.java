@@ -1,4 +1,4 @@
-package org.howard.edu.lsp.assignment4;
+package org.howard.edu.lsp.assignment5;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -113,7 +113,7 @@ public class IntegerSet  {
 	 * This function find the union of the set in the class and another set that is pass in the params
 	 * @param intSetb of type IntegerSet
 	 */
-	public void union(IntegerSet intSetb) {
+	public HashSet<Integer> union(IntegerSet intSetb) {
 		HashSet<Integer> hs = new HashSet<>();
 		 
         for (int i = 0; i < set.size(); i++) {
@@ -123,14 +123,17 @@ public class IntegerSet  {
         	hs.add((Integer) intSetb.set.toArray()[i]);
            }
         HashSet<Integer> set_2 = hs;
+        
         System.out.println("The union of set: " + set.toString() + " and set: " + intSetb.toString() + " is: "+ set_2.toString());
+        return set_2;
 	};
 	
 	/**
 	 * This function finds the intersection of two sets 
 	 * @param intSetb of type IntegerSet
+	 * @return 
 	 */
-	public void intersect(IntegerSet intSetb) {
+	public List<Integer> intersect(IntegerSet intSetb) {
 		HashSet<Integer> hs = new HashSet<>();
 		List<Integer> temp = new ArrayList<Integer>();
 	    for (int i = 0; i < set.size(); i++)
@@ -140,17 +143,20 @@ public class IntegerSet  {
 	            if (hs.contains(intSetb.set.toArray()[i]))
 	                temp.add((Integer) intSetb.set.toArray()[i]);
 	    System.out.println("The Intersection of set: " + set.toString() + " and set: " + intSetb.toString() + " is: "+ temp.toString());
+	    return temp;
 	}; 
 	
 	/**
 	 * This function find the difference between two sets (i.e., s1 – s2)
 	 * @param intSetb of type IntegerSet
+	 * @return 
 	 */
 	
-	public void diff(IntegerSet intSetb){
+	public List<Integer> diff(IntegerSet intSetb){
 		List<Integer> diff = new ArrayList<>(set);
 		diff.removeAll(intSetb.set);
 		System.out.println("The difference between set: " + set.toString() + " and set: " + intSetb.toString() + " is: " + diff);
+		return diff;
 	};
 	
 	/**
